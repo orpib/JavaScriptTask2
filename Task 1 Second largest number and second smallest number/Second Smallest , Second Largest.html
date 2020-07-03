@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../style.css" type="text/stylesheet" rel="stylesheet">
+    <title>For JavaScript Basics</title>
+</head>
+
+<body>
+    <h1>Results</h1>
+    <div style="font-weight: 900;" id="res" >
+      
+    </div>
+    <script type="text/javascript">
+    let numberArray =[20,5,3,7,10,9,100,234,455,2323,567,2,78,4,7];
+    let secSmall=10000000;
+    let firstSmall=secSmall;
+
+    let secMax=0;
+
+    let firstMax=secMax;
+    let len=numberArray.length;
+    //console.log(len);
+    for(let i=0 ; i<len ; i++){
+
+        //console.log("numberArray[i]");
+        
+        if(i==0)
+        {
+            secMax=numberArray[i];
+            secSmall=numberArray[i];
+            firstMax=numberArray[i];
+            firstSmall=numberArray[i];
+        }
+        else{
+
+            if(firstMax < numberArray[i] ){
+                secMax=firstMax;
+                firstMax=numberArray[i];
+            }
+            else{
+                if(secMax < numberArray[i])
+                {
+                    secMax=numberArray[i];
+                }
+            }
+            if(firstSmall > numberArray[i])
+            {
+                secSmall=firstSmall;
+                firstSmall = numberArray[i];
+            }
+            else{
+                if(secSmall >  numberArray[i])
+                {
+                    secSmall=numberArray[i];
+                }
+            }
+        }
+    }
+    let text = "<p>Second Smallest Number is " + secSmall +"</p>" + "<br> <p>" + "Second Largest Number is " + secMax + "</p>" ;
+    document.getElementById("res").innerHTML = text ;
+
+    </script>
+
+</body>
+
+</html>

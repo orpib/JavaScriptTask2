@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="../style.css">
+    <title>For JavaScript Assignment 2</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="input">
+        <button class="btn" onclick="countWords()"> Click Here to Count the words</button>
+
+        <h1 class="result">Results</h1>
+
+        <div style="font-weight: 900;" id="res">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function countWords() {
+            let text = document.getElementById("input").value;
+            let arr = text.split(" ");
+
+            while (arr.indexOf("") != -1) {
+                let index = arr.indexOf("");
+                arr.splice(index, 1);
+            }
+            let textToShow = "<h3>The numbers of words are = " + arr.length + "</h3><p>The words are --> ";
+            for (i = 0; i < arr.length; i++)
+                textToShow += arr[i] + " ";
+            textToShow += "</p>";
+            document.getElementById("res").innerHTML = textToShow;
+        }
+
+    </script>
+
+</body>
+
+</html>
