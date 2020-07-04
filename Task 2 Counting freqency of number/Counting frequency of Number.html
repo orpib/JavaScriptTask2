@@ -3,37 +3,38 @@
 
 <head>
     <link href="../style.css" type="text/stylesheet" rel="stylesheet">
-    <title>For JavaScript Basics</title>
+    <title>For JavaScript Assignment 2</title>
 </head>
 
 <body>
     <script type="text/javascript">
-    let numberArray =[1,1,1,1,1,2,2,10,10,10,10,10,234,234,22,234,45,60,60,234,1,2];
-    let total = 0;
-    let disArray=[];
-    let len=numberArray.length;
-   // console.log(len);
-    numberArray.sort();
-    let i =0 ;
+        let numberArray = [1, 1, 1, 1, 1, 2, 2, 10, 10, 10, 10, 10, 234, 234, 22, 234, 45, 60, 60, 234, 1, 2];
+        let total = 0;
+        let disArray = [];
+        let len = numberArray.length;
+        // console.log(len);
+        numberArray.sort();
+        let i = 0;
 
-    while(i< len){
-        total=0;
-        //console.log(i);
-        let value = numberArray[i];
-        while(value == numberArray[i])
-        {
-            i++;
-            total++;
+        while (i < len) {
+            total = 0;
+            //console.log(i);
+            let value = numberArray[i];
+            while (value == numberArray[i]) {
+                i++;
+                total++;
+            }
+            disArray.push(value, total);
+            // console.log(value);
+            //console.log(total);
         }
-        disArray.push(value, total);
-       // console.log(value);
-        //console.log(total);
-    }
-    let len2= disArray.length;
-    for(let j=0; j<len2; j+=2)
-    {
-        console.log( disArray[j] + " - " + disArray[j+1] + "times" );
-    }
+        let len2 = disArray.length;
+        for (let j = 0; j < len2; j += 2) {
+            if (disArray[j + 1] == 1)
+                console.log(disArray[j] + " - " + disArray[j + 1] + "time");
+            else
+                console.log(disArray[j] + " - " + disArray[j + 1] + "times");
+        }
     //console.log("Second Smallest number is " + secSmall + " and Second Largest Number is " + secMax);
 
     </script>

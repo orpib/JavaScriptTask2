@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="../style.css">
+    <title>For JavaScript Assignment 2</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <input type="text" id="input">
+        <button class="btn" onclick="countWords()"> Click Here to Count the words</button> -->
+
+        <h1 class="result">Results</h1>
+
+        <div style="font-weight: 900;" id="res">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+            let arr = [[],[],[],[],[]];
+            let value=1;
+            for(let i=0;i<4;i++){
+                for(let j=0;j<4;j++){
+                    arr[i].push(value);
+                    value++;
+                }
+            }
+            let textToShow = "<p>"
+            for(i=0;i<4;i++){
+                textToShow += arr[i] + "<br>";
+            }
+            textToShow += "</p>"
+        
+            document.getElementById("res").innerHTML = textToShow;
+
+    </script>
+
+</body>
+
+</html>
